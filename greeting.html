@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function handleImageUpload(event) {
+            const files = event.target.files;
+            const imageContainer = document.getElementById('imageContainer');
+
+            for (let file of files) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('uploaded-image');
+                    imageContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Hello!</h1>
+    <input type="file" accept="image/*" multiple onchange="handleImageUpload(event)">
+    <div id="imageContainer"></div>
+</div>
+</body>
+</html>

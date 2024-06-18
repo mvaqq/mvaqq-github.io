@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://cdn.discordapp.com/attachments/1232452427366793288/1251174241601060894/ranger-4df6c1b6.png?ex=666d9e50&is=666c4cd0&hm=a7c250dc708254e8aa693debd29e594d7fb5f4825a49bdcf514cd59743814f5b&') no-repeat center center/cover;
+}
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 20px;
+    transition: opacity 1s ease-out;
+}
+
+.wrapper.fade-out {
+    opacity: 0;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 0 45px 0 20px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background: lightgray;
+}
+
+#imageContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.uploaded-image {
+    max-width: 100px;
+    max-height: 100px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
